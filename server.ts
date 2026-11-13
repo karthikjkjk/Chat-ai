@@ -1080,4 +1080,9 @@ async function startServer() {
   });
 }
 
-startServer();
+// On Vercel the app is served as a serverless function (api/index.ts), so it must not listen itself.
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;
