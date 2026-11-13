@@ -1,0 +1,6 @@
+{
+  "name": "NEXORA AI",
+  "description": "Your AI. Your World. Complete ChatGPT-style AI assistant with streaming chat, voice, 15 AI tools, and Telugu/English support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
