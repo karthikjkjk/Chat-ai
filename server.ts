@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 
+dotenv.config({ path: '.env.development.local' });
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
