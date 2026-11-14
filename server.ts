@@ -4,6 +4,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 
+dotenv.config({ path: '.env.development.local' });
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -1080,4 +1081,9 @@ async function startServer() {
   });
 }
 
-startServer();
+// On Vercel the app is served as a serverless function (api/index.ts), so it must not listen itself.
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;
